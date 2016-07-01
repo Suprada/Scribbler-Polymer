@@ -1,0 +1,17 @@
+<dom-module id="scribbler-list">
+	<template>
+		<template is="dom-repeat"
+							items="{{scribbles}}"
+							as="scribble">
+			<scribble-item scribble="{{scribble}}"></scribble-item>
+		</template>
+	</template>
+	<script>
+		Polymer({
+			is: "scribbler-list",
+			properties: {
+				scribbles: Array
+			}
+		});
+	</script>
+</dom-module>

@@ -1,0 +1,26 @@
+<dom-module id="scribbler-data">
+  <!-- <template>
+    <h1>hello from inside scribbler data</h1>
+  </template> -->
+  <script>
+    Polymer({
+      is: 'scribbler-data',
+      properties: {
+        scribbles: {
+          notify: true,
+          value: function() {
+            return [
+              {
+                quote: "My first quote",
+                note: "first, quote",
+                location: "279",
+                book: "my-first-book",
+                author: "my-first-author"
+              }
+            ];
+          }
+        }
+      },
+    });
+  </script>
+</dom-module>

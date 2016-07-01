@@ -1,0 +1,21 @@
+<dom-module id="scribble-item">
+	<template>
+		<p>Quote is: <paper-input value="{{scribble.quote}}"></paper-input></p>
+		<p>Note is: <paper-input value="{{scribble.note}}"></paper-input></p>
+		<p>Location is: <paper-input value="{{scribble.location}}"></paper-input></p>
+		<p>Book is: <paper-input value="{{scribble.book}}"></paper-input></p>
+		<p>Author is: <paper-input value="{{scribble.author}}"></paper-input></p>
+		<paper-icon-button icon="icons:delete" on-tap="_onDelete">delete</paper-icon-button>
+	</template>
+	<script>
+		Polymer({
+			is: "scribble-item",
+			properties: {
+				scribble: Object
+			},
+			_onDelete: function(){
+				this.fire('delete-scribble'), {scribble: this.scribble}
+			}
+		});
+	</script>
+</dom-module>

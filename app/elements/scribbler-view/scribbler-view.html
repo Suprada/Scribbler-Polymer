@@ -1,0 +1,18 @@
+<dom-module id="scribbler-view">
+	<template>
+		<paper-button class="clear-btn" on-tap="clearScribbles">
+		<scribbler-list scribbles="{{scribbles}}" on-delete-scribble="deleteScribble"></scribbler-list>
+		<scribble-input on-add-scribble="addScribble"></scribble-input>
+	</template>
+	<script>
+		Polymer({
+			is: "scribbler-view",
+			properties: {
+				scribbles: Array
+			},
+			clearScribbles: function(){},
+			deleteScribble: function(){},
+			addScribble: function(){}
+		});
+	</script>
+</dom-module>
